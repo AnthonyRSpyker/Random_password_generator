@@ -50,9 +50,8 @@ var specialQuestion = confirm("Would you like special characters in your passwor
     
   };
 
+  return newPassword
   
-  console.log(newPassword);
-alert("Your new password is " + newPassword)
  
 
 };
@@ -62,7 +61,7 @@ alert("Your new password is " + newPassword)
 //Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password", newPassword);
+  var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 };
