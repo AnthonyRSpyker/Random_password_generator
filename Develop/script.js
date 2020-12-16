@@ -5,14 +5,16 @@
 
 
 var generateBtn = document.querySelector("#generate");
+var newPassword = "";
+var passwordCharset = "";
 
 function generatePassword(){
 
 var newPassword = "";
-var passwordArray = [];
+var passwordArray = "";
 var lettersUpper = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
 var lettersLower = ["abcdefghijklmnopqrstuvwxyz"];
-var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+var numbers = ["1234567890"];
 var special = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "+", "?"];
 
 var passwordRequest = prompt("How long would you like your password to be? (longer that 8 characters, shorter than 128 characters.");
@@ -47,12 +49,14 @@ var specialQuestion = confirm("Would you like special characters in your passwor
     }
     
   };
-  console.log(newPassword);
 
+  
+  console.log(newPassword);
+alert("Your new password is " + newPassword)
  
+
 };
 
-generateBtn.addEventListener("click", writePassword);
 
 
 //Write password to the #password input
@@ -61,8 +65,8 @@ function writePassword() {
   var passwordText = document.querySelector("#password", newPassword);
 
   passwordText.value = password;
-
-}
+};
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
