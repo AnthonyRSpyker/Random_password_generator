@@ -11,8 +11,6 @@ Working with the site:
 Contents of root menu:
   - readme file
   - image of web-page
-
-Contents of Develop folder:
   - index.html
   - index.js
   - style.css
